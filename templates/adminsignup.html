@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin signup</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='adminsignup.css')}}">
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <center><b>{{message}}</b><center>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<body> 
+    <form method="POST">
+    <div class="formContainer">
+    <h1>Sign Up Form</h1>
+    <hr>
+    <label for="Admin  Id"><b>Admin Id</b></label>
+    <input type="text" placeholder="Enter Email" name="Admin Id" required>
+    <label for="Name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="Name" required>
+    <label for="Gender"><b>Gender</b></label>
+      <select name="Gender" style: width 50%>
+        <option>Female</option>
+        <option>Male</option>
+      </select>
+      <label for="Email Id"><b>Email Id</b></label>
+    <input type="text" placeholder="Enter Email" name="Email Id" required>
+    <label for="Password"><b>Passwordd</b></label>
+    <input type="password" placeholder="Enter password" name="Password" required>
+    <label>
+    <input type="checkbox" checked="checked" name="remember" style="marginbottom: 15px"> Remember me
+    </label>
+    <p>By creating an account you agree to our <a href="#"
+    style="color:dodgerblue">Terms & Privacy</a><p>
+    <div>
+    <button type="button" class="cancel">Cancel</button>
+    <button type="submit" class="signup">Sign Up</button>
+    </div>
+    </div>
+    </form>
+</body>

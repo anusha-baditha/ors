@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/upload.css')}}">
+</head>
+<body>
+    <h1>ADD NOTIFICATIONS</h1>
+    <form method="POST" enctype="multipart/form-data">
+    <div>
+        <label> Notifid </label>  
+      <input type="text" name="Notifid" placeholder= "Enter notification id" size="15" required />
+      </div>
+      <div>
+      <label> File upload </label>   
+      <input type="file" name="File" placeholder= "Upload your file" size="15" required />
+      </div>
+      <div>
+        <label> Notifname</label>   
+        <input type="text" name="Notifname" placeholder= "Enter notification name" size="15" required /> 
+        </div>
+      <div>
+        <label> From Date</label>
+        <input type="date" name="From" required/>
+      </div>
+      <div>
+        <label>To Date</label>
+        <input type="date" name="To" required/>
+      </div>
+      <button>SUBMIT</button>
+    </form>
+</body>
+</html>

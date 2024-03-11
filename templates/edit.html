@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/upload.css')}}">
+</head>
+<body>
+  <form method="POST"  enctype="multipart/form-data" >
+  <h1>EDIT NOTIFICATIONS</h1>
+  <div>
+      <select name="choice">
+        {% for i in data %}
+        <option>{{i[0]}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+    <label> Notifname</label>   
+    <input type="text" name="name" placeholder= "Enter notification name" size="15" required /> 
+    </div>
+    <div>
+    <label> File upload </label>   
+    <input type="file" name="File" placeholder= "Upload your file" size="15" required />
+    </div>
+    <div>
+      <label> From Date</label>
+      <input type="date" name="From" required/>
+    </div>
+    <div>
+      <label>To Date</label>
+      <input type="date" name="To" required/>
+    </div>
+    <button>SUBMIT</button>
+  </form>  
+</body>
+</html>

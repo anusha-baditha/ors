@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <form>  
+        <div class="container">  
+        <center> <h1>USER SIGN UP</h1> </center>  
+        <hr> 
+        <div>
+        <label> Name </label>   
+      <input type="text" name="Name" placeholder= "Enter your name" size="15" required />
+      </div>
+      <div>
+      <label> Id</label>   
+      <input type="text" name="Id" placeholder= "Enter your id" size="15" required /> 
+      </div>
+      <div>
+      <label> Age </label>   
+      <input type="text" name="Age" placeholder= "Enter your age" size="15" required />
+      </div>
+      <div>
+      <label> Gender </label>   
+      <input type="radio" value="Male" name="gender" checked > Male   
+      <input type="radio" value="Female" name="gender"> Female
+      </div>
+      <div>
+      <label> Email id </label>   
+      <input type="text" name="Email id" placeholder= "Enter your email" size="15" required />
+      </div>
+      <div>
+      <label>Phone no </label> 
+      <input type="text" name="phone" placeholder="phone no."  required/>
+      </div>
+      <div>
+        <label> Experience </label> <br/> 
+        <small><strong>For freshers enter Not Applicalble</small></strong> 
+      <input type="text" name="Experience" placeholder= "Enter your experience" size="15" required />
+      </div>
+      <div>
+        <label> Company </label> <br/> 
+        <small><strong>For freshers enter Not Applicalble</small> </strong>
+      <input type="text" name="Company" placeholder= "Enter your perivous company" size="15" required />
+      </div>
+      <div>
+        <label> Email id </label>   
+      <input type="text" name="Email id" placeholder= "Enter your email" size="15" required />
+      </div>
+      <div>
+        <label>Current address</label>
+        <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+        </textarea>
+      </div>
+      <a href="{{url_for('login.html')}}"><button>Register</button>
+    </div>
+</body>
+</html>

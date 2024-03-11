@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      table, th, td {  
+  border: 1px solid #ddd;
+  text-align: center;
+                  }
+          table {
+               border-collapse: collapse;
+             width: 100%;}
+      th, td{
+        padding: 15px;
+            }
+    </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Notif Id</th>
+      <th>Notif name</th>
+      <th>From_date</th>
+      <th>To_date</th>
+      <th>File upload</th>
+    </tr>
+    {% for i in notifications %}
+        <tr>
+          <td>{{i[0]}}</td>
+          <td>{{i[1]}}</td>
+          <td>{{i[2]}}</td>
+          <td>{{i[3]}}</td>
+          <td><a href="{{url_for('view',id1=i[0])}}">view</a></td>
+        </tr>
+    {% endfor %}
+</table>   
+</body>
+</html>
